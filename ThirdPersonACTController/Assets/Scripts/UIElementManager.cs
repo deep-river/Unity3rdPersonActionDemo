@@ -20,6 +20,8 @@ public class UIElementManager : MonoBehaviour
 
     Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
 
+    public GameObject nearestUI = null;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +57,7 @@ public class UIElementManager : MonoBehaviour
         while (true)
         {
             float minDist = float.MaxValue;
-            GameObject nearestUI = null;
+            nearestUI = null;
 
             foreach (GameObject gPointUI in grapplePointUIList)
             {
